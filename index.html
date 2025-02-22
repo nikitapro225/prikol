@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кнопка с изображением и звуком</title>
+    <title>супер попа</title>
     <style>
         body {
             display: flex;
-            justify-content: center; /* Центрирование по горизонтали */
-            align-items: center; /* Центрирование по вертикали */
-            height: 100vh; /* Высота вьюпорта */
-            margin: 0; /* Убираем отступы */
-            background-color: #f0f0f0; /* Цвет фона (по желанию) */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; 
         }
 
         .round-button {
-            width: 150px; /* Ширина кнопки */
-            height: 150px; /* Высота кнопки */
-            border-radius: 50%; /* Закругление для круглой формы */
-            background-image: url('1.jpg'); /* Путь к изображению */
-            background-size: cover; /* Масштабирование изображения */
-            border: none; /* Убираем границу */
-            cursor: pointer; /* Курсор при наведении */
-            outline: none; /* Убираем обводку при фокусе */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url('1.jpg');
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+            outline: none;
         }
     </style>
 </head>
 <body>
-
-<button class="round-button" onclick="playSound()"></button>
-<audio id="sound" src="1.mp3"></audio>
-
-<script>
-    function playSound() {
-        var sound = document.getElementById('sound');
-        sound.currentTime = 0; // Сброс времени воспроизведения
-        sound.play(); // Воспроизведение звука
-    }
-</script>
-
+    <button class="round-button" onclick="playSound()"></button>
+    <audio id="sound" src="1.mp3"></audio>
+    <script>
+        function playSound() {
+            var sound = document.getElementById('sound');
+            sound.currentTime = 0; // Сброс времени воспроизведения
+            sound.play(); // Воспроизведение звука
+        }
+    </script>
 </body>
 </html>
