@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>супер попа</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; 
+        }
+
+        .round-button {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url('1.jpg');
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="round-button" onclick="playSound()"></button>
+    <audio id="sound" src="1.mp3"></audio>
+    <script>
+        function playSound() {
+            var sound = document.getElementById('sound');
+            sound.currentTime = 0; // Сброс времени воспроизведения
+            sound.play(); // Воспроизведение звука
+        }
+    </script>
+</body>
+</html>
