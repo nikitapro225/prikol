@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sound</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-size: 48px;
+            font-family: Arial, sans-serif;
+        }
+        #image {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="text">tt: cblhok_190(кликни)</div>
+    <img id="image" src="assets/1.jpg" alt="Image" />
+    <audio id="audio" src="assets/arab.mp3" loop></audio>
+
+    <script>
+        const text = document.getElementById('text');
+        const image = document.getElementById('image');
+        const audio = document.getElementById('audio');
+        audio.volume = 1;
+
+        document.body.addEventListener('click', function() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { 
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { 
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { 
+                document.documentElement.msRequestFullscreen();
+            }
+
+            text.style.display = 'none';
+            image.style.display = 'block';
+            audio.play();
+
+
+        }, { once: true });
+    </script>
+</body>
+</html>
